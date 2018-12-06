@@ -1,0 +1,14 @@
+<%= content_for :header do %>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="jumbotron">
+        <h1 class="display-4"><%= t('users.index.title') %></h1>
+      </div>
+    </div>
+  </div>
+<% end %>
+
+<div class="row">
+  <%= render partial: 'user',
+    collection: @users %>
+</div>

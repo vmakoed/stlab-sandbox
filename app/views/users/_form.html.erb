@@ -1,0 +1,14 @@
+<%= simple_form_for @user do |form| %>
+  <%= form.input :first_name %>
+  <%= form.input :last_name %>
+  <%= form.input :email,
+                 label: 'Your email please',
+                 placeholder: 'user@domain.com',
+                 hint: 'no special characters',
+                 required: true,
+                 input_html: { class: 'special',
+                               max_length: 20 }
+  %>
+  <%= form.input :age, collection: (18..30) %>
+  <%= form.submit %>
+<% end %>
